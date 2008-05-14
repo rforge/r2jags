@@ -1,0 +1,17 @@
+import("R2WinBUGS", "coda", "rjags")
+
+exportClasses(
+              "rjags"              
+              )
+
+
+export(
+       "jags",
+       "jags2",
+       "jags2bugs"
+)
+
+
+S3method("plot", "rjags")
+S3method("print", "rjags")
+S3method("update", "rjags")
