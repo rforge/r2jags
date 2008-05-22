@@ -5,17 +5,13 @@
 % functions
 \alias{jags}
 \alias{jags2}
-% display methods
-\alias{print,rjags-method}
-\alias{plot,rjags-method}
-\alias{update,rjags-method}
 
 
 \title{Run jags from R}
 \description{
-The \code{jags} function takes data and starting values as input.  It
-automatically writes a \code{jags} script, calls the model, and
-saves the simulations for easy access in R.
+  The \code{jags} function takes data and starting values as input.  It
+  automatically writes a \code{jags} script, calls the model, and
+  saves the simulations for easy access in R.
 }
 
 \usage{
@@ -97,8 +93,8 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
 }
 
 \author{ 
-  Masanao Yajima \email{yajima@stat.columbia.edu},
-  Yu-Sung Su \email{ys463@columbia.edu}
+  Yu-Sung Su \email{ys463@columbia.edu},
+  Masanao Yajima \email{yajima@stat.columbia.edu}
 }
 
 
@@ -131,6 +127,7 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
   jags.inits <- function(){
     list("mu"=rnorm(1),"sigma"=runif(1),"theta"=rnorm(J))
   }
+  
 #=============#
 # using jags  #
 #=============#
@@ -144,6 +141,9 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
   print(jagsfit.upd)
   plot(jagsfit.upd)
   
+  # or auto update it until it converges!
+  jagsfit.upd <- autojags(jagsfit)
+    
   # to get DIC
   dic.samples(jagsfit.upd$model, n.iter=1000, type="pD")
 

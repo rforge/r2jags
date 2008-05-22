@@ -19,7 +19,7 @@ jags <- function (data, inits, parameters.to.save, model.file = "model.bug",
   
   dump(data, file = "jagsdata.txt")
   data <- read.jagsdata("jagsdata.txt")
-  file.remove("jagsdata.txt")
+  file.remove("jagsdata.txt")              
   
   if (is.function(model.file)) {
     temp <- tempfile("model")

@@ -6,6 +6,7 @@ exportClasses(
 
 
 export(
+       "autojags",
        "jags",
        "jags2",
        "jags2bugs"
