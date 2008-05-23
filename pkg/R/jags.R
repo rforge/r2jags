@@ -43,7 +43,7 @@ jags <- function (data, inits, parameters.to.save, model.file = "model.bug",
   update(m, n.burnin)
   
   samples <- coda.samples(model = m, variable.names = parameters.to.save, 
-      n.iter = n.iter, thin = n.thin)
+      n.iter = (n.iter-n.burnin), thin = n.thin)
   
   fit <- mcmc2bugs(samples, model.file = model.file, program = "jags", 
       DIC = DIC, DICOutput = NULL, n.iter = n.iter, n.burnin = n.burnin, 
