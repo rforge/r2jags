@@ -16,7 +16,10 @@ jags2 <- function (data, inits, parameters.to.save, model.file = "model.bug",
   }
   redo <- ceiling(n.iter - n.burnin)
 
-  lapply(names(data), dump, append=TRUE, file="data.txt")
+  data.list <- lapply(as.list(data), get, pos = parent.frame(2))
+  names(data.list) <- as.list(data)
+  lapply(names(data.list), dump, append=TRUE, file="jagsdata.txt")
+  data <- read.jagsdata("jagsdata.txt")
 
   if (is.function(model.file)) {
     temp <- tempfile("model")
