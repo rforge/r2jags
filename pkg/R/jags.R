@@ -17,7 +17,7 @@ jags <- function (data, inits, parameters.to.save, model.file = "model.bug",
     setwd(working.directory)
   }
   
-  dump(data, file = "jagsdata.txt")
+  lapply(names(data), dump, append=TRUE, file="jagsdata.txt")
   data <- read.jagsdata("jagsdata.txt")
   file.remove("jagsdata.txt")              
   

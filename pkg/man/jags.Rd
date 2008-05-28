@@ -122,7 +122,7 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
   y <- c(28.4,7.9,-2.8,6.8,-0.6,0.6,18.0,12.2)
   sd <- c(14.9,10.2,16.3,11.0,9.4,11.4,10.4,17.6)
 
-  jags.data <- c("y","sd","J")
+  jags.data <- list("y","sd","J")
   jags.params <- c("mu","sigma","theta")
   jags.inits <- function(){
     list("mu"=rnorm(1),"sigma"=runif(1),"theta"=rnorm(J))
