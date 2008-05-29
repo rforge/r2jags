@@ -5,7 +5,6 @@ Title: R2jags: A Package for Running jags (Windows version) from R
 Author: Yu-Sung Su <ys463@columbia.edu>,
         Masanao Yajima <yajima@stat.columbia.edu>,
 Maintainer: Yu-Sung Su <ys463@columbia.edu>
-Depends: rjags, R2WinBUGS, coda
-SystemRequirements: jags (== 1.0.2)
+Depends: rjags, R2WinBUGS, coda, SWinRegistry
 Description: Using this package to call jags (Windows version) from R.
 License: GPL (>= 2)

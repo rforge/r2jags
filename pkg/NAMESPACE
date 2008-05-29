@@ -1,4 +1,4 @@
-import("R2WinBUGS", "coda", "rjags")
+import("R2WinBUGS", "rjags")
 
 exportClasses(
               "rjags"              
