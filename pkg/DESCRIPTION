@@ -1,10 +1,11 @@
 Package: R2jags
-Version: 0.01-7
-Date: 2008-5-28
-Title: R2jags: A Package for Running jags (Windows version) from R
+Version: 0.01-8
+Date: 2008-7-18
+Title: R2jags: A Package for Running jags from R
 Author: Yu-Sung Su <ys463@columbia.edu>,
         Masanao Yajima <yajima@stat.columbia.edu>,
 Maintainer: Yu-Sung Su <ys463@columbia.edu>
-Depends: rjags, R2WinBUGS, coda, SWinRegistry
-Description: Using this package to call jags (Windows version) from R.
+Depends: R (>= 2.7.0), coda(>= 0.13), R2WinBUGS, rjags
+SystemRequirements: jags (== 1.0.2)
+Description: Using this package to call jags from R.
 License: GPL (>= 2)
