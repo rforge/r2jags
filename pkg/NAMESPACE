@@ -1,4 +1,7 @@
-import("R2WinBUGS", "rjags")
+#import("R2WinBUGS", "rjags")
+
+#importFrom(rjags,jags.model)
+#importFrom(rjags,coda.samples)
 
 exportClasses(
               "rjags"              
