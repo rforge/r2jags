@@ -17,9 +17,11 @@ jags <- function (data, inits, parameters.to.save, model.file = "model.bug",
     setwd(working.directory)
   }
   
-  data.list <- lapply(as.list(data), get, pos = parent.frame(2))
+  #data.list <- lapply(as.list(data), get, pos = parent.frame(2))
+  data.list <- lapply(as.list(data), get, pos = parent.frame(1))
   names(data.list) <- as.list(data)
-  lapply(names(data.list), dump, append=TRUE, file="jagsdata.txt")
+  lapply(names(data.list), dump, append=TRUE, file="jagsdata.txt",
+      envir=parent.frame(1))
   data <- read.jagsdata("jagsdata.txt")
   file.remove("jagsdata.txt")              
   

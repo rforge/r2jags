@@ -1,7 +1,7 @@
-setOldClass("jags")
-setOldClass("bugs")
+methods::setOldClass("jags")
+methods::setOldClass("bugs")
 
-setClass("rjags",
+methods::setClass("rjags",
      representation(
             model = "jags",
             BUGSoutput = "bugs")
