@@ -3,6 +3,9 @@
 #importFrom(rjags,jags.model)
 #importFrom(rjags,coda.samples)
 
+
+#import(rjags)
+
 exportClasses(
               "rjags"              
               )
