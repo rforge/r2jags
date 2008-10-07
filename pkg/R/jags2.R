@@ -80,7 +80,7 @@ jags2 <- function (data, inits, parameters.to.save, model.file = "model.bug",
   
   system(paste(jags.call, "jagsscript.txt"))
   
-  fit <- jags2bugs(path = working.directory, parameters.to.save = parameters.to.save, 
+  fit <- jags.sims(parameters.to.save = parameters.to.save, 
       n.chains = n.chains, n.iter = n.iter, n.burnin = n.burnin, 
       n.thin = n.thin, DIC = DIC)
   
@@ -89,5 +89,6 @@ jags2 <- function (data, inits, parameters.to.save, model.file = "model.bug",
           "jagsscript.txt", paste("CODAchain", 1:n.chains, 
               ".txt", sep = "")))
   }
+  class(fit) <- "bugs"
   return(fit)
 }
