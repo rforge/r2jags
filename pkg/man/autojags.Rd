@@ -1,6 +1,8 @@
 \name{autojags}
 \alias{update.rjags}
 \alias{autojags}
+\alias{recompile}
+\alias{recompile.rjags}
 
 
 \title{Function for auto-updating jags until the model converges}
@@ -12,6 +14,7 @@ The \code{autojags} takes a \code{rjags} object as input.
 \usage{
 
 \method{update}{rjags}(object, n.iter=1000, n.thin=1, \ldots)
+\method{recompile}{rjags}(object)
 
 autojags(object, n.iter=1000, n.thin=1, Rhat=1.1, n.update=2, \ldots)
 

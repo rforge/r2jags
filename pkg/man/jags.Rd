@@ -147,17 +147,25 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
   # to get DIC
   dic.samples(jagsfit.upd$model, n.iter=1000, type="pD")
 
+  # to pick up the last save session
+  # for example, load("RWorkspace.Rdata")
+  recompile(jagsfit)
+  jagsfit.upd <- update(jagsfit)
+
+
 #=============#
 # using jags2 #
 #=============#
   ## jags cannot be updated, but produces coda files
   ## You may need to edit "jags.path",
   ## also you need write access in the working directory:
+  ## currently works only under Windows OS
   ## e.g. setwd("c:/")
-  jagsfit <- jags2(data=jags.data, inits=jags.inits, jags.params, 
-    n.iter=5000, model.file=model.file)
-  print(jagsfit)
-  plot(jagsfit)
+  
+  #jagsfit <- jags2(data=jags.data, inits=jags.inits, jags.params, 
+  #  n.iter=5000, model.file=model.file)
+  #print(jagsfit)
+  #plot(jagsfit)
 }
 
 \keyword{interface}
