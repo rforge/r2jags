@@ -60,7 +60,7 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
   \item{working.directory}{sets working directory during execution of
     this function; This should be the directory where model file is.}
   \item{jags.path}{directory that contains the \pkg{jags} executable.
-    The default is "".  }
+    The default is \dQuote{}.  }
   \item{clearWD}{indicating whether the files \file{data.txt},
     \file{inits[1:n.chains].txt}, \file{codaIndex.txt}, \file{jagsscript.txt},
     and \file{CODAchain[1:nchains].txt} should be removed after \pkg{jags} has
@@ -96,7 +96,7 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
     Plummer, Martyn (2003) 
     \dQuote{JAGS: A program for analysis of Bayesian graphical models using Gibbs sampling.}
     \url{http://citeseer.ist.psu.edu/plummer03jags.html}.
-
+    
     Gelman, A., Carlin, J.B., Stern, H.S., Rubin, D.B. (2003)
     \emph{Bayesian Data Analysis}, 2nd edition, CRC Press.
 
