@@ -35,7 +35,8 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
     the model.}
   \item{inits}{a list with \code{n.chains} elements; each element of the
     list is itself a list of starting values for the \code{BUGS} model,
-    \emph{or} a function creating (possibly random) initial values.}
+    \emph{or} a function creating (possibly random) initial values. if inits is 
+    \code{NULL}, \pkg{jags} will generate initial values for parameters.}
   \item{parameters.to.save}{character vector of the names of the
     parameters to save which should be monitored.}
   \item{model.file}{file containing the model written in \code{BUGS} code.}
