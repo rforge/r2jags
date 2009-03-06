@@ -12,7 +12,7 @@ The \code{autojags} takes a \code{rjags} object as input.
 
 \usage{
 
-\method{update}{rjags}(object, n.iter=1000, n.thin=1, refresh=n.iter/50, \dots)
+\method{update}{rjags}(object, n.iter=1000, n.thin=1, refresh=n.iter/50,  \dots)
 autojags(object, n.iter=1000, n.thin=1, Rhat=1.1, n.update=2, refresh=n.iter/50, \dots)
 
 }
