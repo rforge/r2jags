@@ -43,13 +43,13 @@ jags <- function (data, inits, parameters.to.save, model.file = "model.bug",
   
   if(is.null(inits)){
     m <- jags.model(model.file, data = data, n.chains = n.chains, 
-      n.adapt = 0, by = refresh)
-    adapt(m, n.adapt =  n.adapt, by = refresh) 
+      n.adapt = 0)
+    adapt(m, n.iter =  n.adapt, by = refresh) 
   }
   else{ 
     m <- jags.model(model.file, data = data, inits=inits, n.chains = n.chains, 
-      n.adapt = 0, by = refresh)
-    adapt(m, n.adapt =  n.adapt, by = refresh) 
+      n.adapt = 0)
+    adapt(m, n.iter =  n.adapt, by = refresh) 
   }
   
   if(n.burnin > 0){
