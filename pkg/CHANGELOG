@@ -1,3 +1,7 @@
+2009-8-18  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-25.
+    * add attach.jags and detach.jags functions.
+
 2009-8-6  Yu-Sung Su <ys463@columbia.edu>  
     * DESCRIPTION (Version, Date): 0.01-24.
     * fix a bug in jags.sim and as.bugs.array2 (DIC calculation)

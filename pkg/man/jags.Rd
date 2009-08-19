@@ -157,6 +157,15 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
     
   # to get DIC or specify DIC=TRUE in jags() or do the following
   dic.samples(jagsfit.upd$model, n.iter=1000, type="pD")
+  
+  # attach jags object into search path see "attach.bugs" for details
+  attach.jags(jagsfit.upd)
+  
+  # this will show a 3-way array of the bugs.sim object, for example:
+  mu
+  
+  # detach jags object into search path see "attach.bugs" for details
+  detach.jags()
 
   # to pick up the last save session
   # for example, load("RWorkspace.Rdata")
