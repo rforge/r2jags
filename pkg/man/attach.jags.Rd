@@ -4,14 +4,14 @@
 
 \title{Attach /  detach elements of jags objects to search path}
 \description{
-  These are wraper functions for \code{attach.bugs} and \code{detach.bugs}, which
+  These are wraper functions for \code{\link[R2WinBUGS]{attach.bugs}} and \code{\link[R2WinBUGS]detach.bugs}}, which
   attach or detach three-way-simulation array of bugs object to the search path. See
-  \code[R2WinBUGS]{attach.all} for details.
+  \code{\link[R2WinBUGS]{attach.all}} for details.
 }
 
 \usage{
   attach.jags(x, overwrite = NA)
-  detach.bugs()
+  detach.jags()
 }
 
 
@@ -27,7 +27,7 @@
 
 
 \details{
-  See \code[R2WinBUGS]{attach.bugs] for details
+  See \code{\link[R2WinBUGS]{attach.bugs}} for details
 }
 
 \author{ 
