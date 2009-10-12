@@ -17,15 +17,15 @@
 \usage{
 jags(data, inits, parameters.to.save, model.file="model.bug",
   n.chains=3, n.iter=2000, n.burnin=floor(n.iter/2),
-  n.thin=max(1, floor((n.iter - n.burnin) / n.sims)),
-  n.sims = 1000, DIC=TRUE, working.directory=NULL,
+  n.thin=max(1, floor((n.iter - n.burnin) / 1000)),
+  DIC=TRUE, working.directory=NULL,
   refresh = n.iter/50, progress.bar = "text")
 
 
 jags2(data, inits, parameters.to.save, model.file="model.bug",
   n.chains=3, n.iter=2000, n.burnin=floor(n.iter/2),
-  n.thin=max(1, floor((n.iter - n.burnin) / n.sims)),
-  n.sims = 1000, DIC=TRUE, jags.path="", 
+  n.thin=max(1, floor((n.iter - n.burnin) / 1000)),
+  DIC=TRUE, jags.path="", 
   working.directory=NULL, clearWD=TRUE,
   refresh = n.iter/50)
 }
@@ -53,7 +53,7 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
     \code{n.iter} is large.  Default is \code{max(1, floor(n.chains *
     (n.iter-n.burnin) / 1000))} which will only thin if there are at
     least 2000 simulations.}
-  \item{n.sims}{The approximate number of simulations to keep after thinning.}
+%  \item{n.sims}{The approximate number of simulations to keep after thinning.}
 %  \item{n.adapt}{the number of iterations for adaptation.  When a model is
 %          first created, some of the samplers may have an adaptive
 %          mode. In this case, the samplers are run for \code{n.adapt}
