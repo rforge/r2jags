@@ -1,6 +1,7 @@
 2010-2-3  Yu-Sung Su <ys463@columbia.edu>  
     * R/as.bugs.array: fix sims.list permutation
-    * R/jags.sim: fix sims.list permutation
+    * R/jags.sim: fix sims list permutation
+    * R/jags2: fix missing data.list name, this causes read.rjags failure 
 
 2009-12-21  Yu-Sung Su <ys463@columbia.edu>  
     * DESCRIPTION (Version, Date): 0.01-30.
