@@ -21,6 +21,10 @@ jags <- function (data, inits, parameters.to.save, model.file = "model.bug",
   
   if(is.list(data)){
     data.list <- data
+    for(jj in length(data.list)){
+      assign(names(data.list)[jj], value=data.list[[jj]], envir=parent.frame(1))
+    }
+    browser()
     lapply(names(data.list), dump, append=TRUE, file="jagsdata.txt",
        envir=parent.frame(1))  
   }
