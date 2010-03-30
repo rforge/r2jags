@@ -21,7 +21,7 @@ jags <- function (data, inits, parameters.to.save, model.file = "model.bug",
   
   if(is.list(data)){
     data.list <- data
-    lapply(data.list, dump, append=TRUE, file="jagsdata.txt",
+    lapply(names(data.list), dump, append=TRUE, file="jagsdata.txt",
        envir=parent.frame(1))  
   }
   else{

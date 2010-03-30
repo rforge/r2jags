@@ -25,7 +25,7 @@ jags2 <- function (data, inits, parameters.to.save, model.file = "model.bug",
   
   if(is.list(data)){
     data.list <- data 
-    lapply(data.list, dump, append=TRUE, file="jagsdata.txt", envir=parent.frame(1)) 
+    lapply(names(data.list), dump, append=TRUE, file="jagsdata.txt", envir=parent.frame(1)) 
   }
   else{
     if (!(length(data) == 1 && is.vector(data) && is.character(data) && 
