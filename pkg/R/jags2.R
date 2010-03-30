@@ -24,6 +24,7 @@ jags2 <- function (data, inits, parameters.to.save, model.file = "model.bug",
   
   
   if(is.list(data)){
+    attach(data, warn.conflict=FALSE)
     data.list <- data 
     lapply(names(data.list), dump, append=TRUE, file="jagsdata.txt", envir=parent.frame(1)) 
   }
