@@ -24,9 +24,8 @@ jags2 <- function (data, inits, parameters.to.save, model.file = "model.bug",
   
   
   if(is.list(data)){
-    attach(data, warn.conflict=FALSE)
     data.list <- data 
-    lapply(names(data.list), dump, append=TRUE, file="jagsdata.txt", envir=parent.frame(1)) 
+    lapply(data.list, dump, append=TRUE, file="jagsdata.txt", envir=parent.frame(1)) 
   }
   else{
     if (!(length(data) == 1 && is.vector(data) && is.character(data) && 
@@ -95,7 +94,10 @@ jags2 <- function (data, inits, parameters.to.save, model.file = "model.bug",
     }
   } 
   
-  if (DIC){parameters.to.save <- c(parameters.to.save, "deviance")}
+  if (DIC){
+    parameters.to.save <- c(parameters.to.save, "deviance")
+    load.module("dic", quiet = TRUE)
+  }
 
   
   cat("model clear\ndata clear\n", 
