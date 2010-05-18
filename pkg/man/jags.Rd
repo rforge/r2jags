@@ -162,8 +162,8 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
   # or auto update it until it converges! see ?autojags for details
   jagsfit.upd <- autojags(jagsfit)
     
-  # to get DIC or specify DIC=TRUE in jags() or do the following
-  dic.samples(jagsfit.upd$model, n.iter=1000, type="pD")
+  # to get DIC or specify DIC=TRUE in jags() or do the following#
+  ### dic.samples(jagsfit.upd$model, n.iter=1000, type="pD") not working!!
   
   # attach jags object into search path see "attach.bugs" for details
   attach.jags(jagsfit.upd)
