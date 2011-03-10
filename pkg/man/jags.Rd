@@ -159,6 +159,7 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
   # if the model does not converge, update it!
   jagsfit.upd <- update(jagsfit, n.iter=1000)
   print(jagsfit.upd)
+  print(jagsfit.upd, intervals=c(0.025, 0.5, 0.975))
   plot(jagsfit.upd)
   
   # or auto update it until it converges! see ?autojags for details
