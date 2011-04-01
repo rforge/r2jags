@@ -1,6 +1,6 @@
 Package: R2jags
-Version: 0.02-14
-Date: 2011-3-17
+Version: 0.02-15
+Date: 2011-3-30
 Title: A Package for Running jags from R
 Author: Yu-Sung Su <suyusung@tsinghua.edu.cn>, 
         Masanao Yajima <yajima@stat.columbia.edu>,
