@@ -1,3 +1,8 @@
+
+2011-8-8  Masanao Yajima <yajima@ucla.edu>  
+    * DESCRIPTION (Version, Date): 0.02-29.
+    * R/jags: Cleaned up the code.
+
 2011-7-28  Yu-Sung Su <ys463@columbia.edu>  
     * DESCRIPTION (Version, Date): 0.02-28.
     * R/recompile/jags: add end.adaptation=TRUE  
