@@ -11,8 +11,8 @@ jags2 <- function (data, inits, parameters.to.save, model.file = "model.bug",
     on.exit(setwd(savedWD))
   }
   else {
-    saveWD <- getwd()
-    working.directory <- saveWD
+    savedWD <- getwd()
+    working.directory <- savedWD
   }
   
   redo <- ceiling(n.iter - n.burnin)

@@ -1,5 +1,5 @@
 2012-2-12  Yu-Sung Su <ys463@columbia.edu>  
-    * DESCRIPTION (Version, Date): 0.03-01.
+    * DESCRIPTION (Version, Date): 0.03-02.
     * R/jags.parallel: add new function that runs jags parallely
 
 2011-8-8  Masanao Yajima <yajima@ucla.edu>  

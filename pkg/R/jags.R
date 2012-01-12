@@ -13,11 +13,11 @@ jags <- function( data, inits,
   require( rjags )
   if( !is.null( working.directory ) ){
     working.directory <- path.expand( working.directory )
-    saveWD <- getwd()
+    savedWD <- getwd()
     setwd( working.directory )
     on.exit( setwd( savedWD ) )
   } else {
-    working.directory <- saveWD
+    working.directory <- savedWD
   }
   ## jags.model() needs 'data' to be "a list or environment containing the data
   if( is.character( data ) && length(data) == 1 
