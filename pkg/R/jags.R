@@ -17,6 +17,7 @@ jags <- function( data, inits,
     setwd( working.directory )
     on.exit( setwd( savedWD ) )
   } else {
+    savedWD <- getwd()
     working.directory <- savedWD
   }
   ## jags.model() needs 'data' to be "a list or environment containing the data
@@ -24,7 +25,7 @@ jags <- function( data, inits,
                            && regexpr( "\\.txt$", data ) > 0 ) {
     ## 1. 'data' looks like a file name [UNDOCUMENTED!]
     if ( all( basename( data ) == data )) {
-      try( file.copy( file.path( savedWD, data ), data, overwrite = TRUE ) )
+      try( file.copy( file.path( working.directory, data ), data, overwrite = TRUE ) )
     }
     if ( !file.exists( data ) ) {
       stop("File",data,"does not exist")

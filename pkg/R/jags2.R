@@ -33,7 +33,7 @@ jags2 <- function (data, inits, parameters.to.save, model.file = "model.bug",
     }
     else {
       if (all(basename(data) == data)) {
-        try(file.copy(file.path(savedWD, data), data, overwrite = TRUE))
+        try(file.copy(file.path(working.directory, data), data, overwrite = TRUE))
       }
       if (!file.exists(data)) {
         stop("File", data, "does not exist.")
