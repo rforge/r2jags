@@ -1,0 +1,171 @@
+2012-2-12  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.03-02.
+    * R/jags.parallel: add new function that runs jags parallely
+
+2011-8-8  Masanao Yajima <yajima@ucla.edu>  
+    * DESCRIPTION (Version, Date): 0.02-29.
+    * R/jags: Cleaned up the code.
+
+2011-7-28  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-28.
+    * R/recompile/jags: add end.adaptation=TRUE  
+
+2011-7-21  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-16.
+    * R/print: fix a bug that would print out NA when DIC=FALSE
+
+2011-3-30  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-15.
+    * R/print: fix a bug that would print out variable name wrongly
+
+2011-3-17  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-14.
+    * R/print: miscollect sds as means in printout
+
+2011-3-10  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-13.
+    * R/print: allow output to print with user-specified quantile
+
+2010-12-8  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-11.
+    * man/jags: \dontrun jags2, need to write a function to search for JAGS.
+
+2010-9-28  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-10.
+    * man/traceplot: comment out docType
+
+
+2010-8-10  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-09.
+    * man/jags: reactivate dic.samples example.
+
+
+2010-5-23  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-08.
+    * man/jags: reactivate dic.samples example.
+
+2010-5-18  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-02.
+    * R/jags2: 
+        1. fix a bug in jagsscript.  
+        2. change CODAIndex to CODAindex
+    * R/jags.sim: change CODAIndex to CODAindex
+
+2010-2-3  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.02-01.
+    * R/as.bugs.array: fix sims.list permutation
+    * R/jags.sim: fix sims list permutation
+    * R/jags2: fix missing data.list name, this causes read.rjags failure 
+
+2009-12-21  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-30.
+    * R/as.bugs.array2: comment out n.burnin=0 in the code.
+
+2009-12-15  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-29.
+    * R/jags: now really allow a data to be a data list.
+    * R/as.mcmc: create new a as.mcmc.rjags method
+    * R/traceplot: reset par(ask) while exiting traceplot
+
+2009-12-14  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-28.
+    * R/autojags: fix a bug in the condtion of checking convergence 
+
+2009-11-9  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-27.
+    * R/jags: 
+      1. change the way to specify the working directory.
+      2. allow data to be list of data object.
+    * R/jags2: 
+      1. change the way to specify the working directory.
+      2. allow data to be list of data object.
+      3. coda outputs are now named as CODAchain1 and CODAIndex
+    * R/jags.sim: read coda output as CODAchain1 and CODAIndex
+
+2009-10-12  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-26.
+    * R/jags: get rid of parameter n.sims
+
+
+2009-8-18  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-25.
+    * add attach.jags and detach.jags functions.
+
+2009-8-6  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-24.
+    * fix a bug in jags.sim and as.bugs.array2 (DIC calculation)
+      thanks to Luwis Diya
+
+2009-5-4  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-23.
+    * fix jags.sim and as.bugs.array2 to be consistent with WinBUGS output (sims.list)
+
+2009-4-13  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-22.
+    * delete the option n.adapt for jags() and incorporate that into n.burnin
+      This is to make jags() more consistent with bugs().
+
+2009-3-10  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-21.
+    * pass option "progress.bar" to functions
+
+2009-3-8  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-20.
+    * n.adpate in jags.model now set to 0 but use adapte() to adapte 
+      jags.model.
+
+2009-3-7  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-19.
+    * add refresh rate option for the progress bar.
+
+
+2009-3-4  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-17.
+    * R/as.bugs.array2: provide by Eduardo Leoni to fix dimension problem of jags output.
+        (It is actually the problem of as.bugs.array.  JAGS simply returns different dimenstion.
+        So we need new as.bugs.array2 here.  Right now, keep it Internal, maybe export later!)
+
+2009-2-23  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-16.
+    * R/jags: nchain --> n.chains (changed by rjags)
+
+
+2009-2-10  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-15.
+    * R/jags: inits=NULL, let jags gen inits
+
+
+2009-1-28  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-14.
+    * R/traceplot: add traceplot generic and rjags method
+    * R/jags: fix the bug when n.burnin=0
+
+
+2008-11-6  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-13.
+    * R/recompile: update set to 100 to ensure complete adaptation
+
+
+2008-10-17  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-12.
+    * man/recompile: documentation for recompile.
+    * R/recompile: new function to pick up previous saved rjags object.
+
+
+2008-10-7  Yu-Sung Su <ys463@columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-11.
+    * R/Allclass: explicitly using setOldClass from methods::
+    * prepare to release! 
+
+
+
+2008-8-18  Ben Bolker <bolker@zoology.ufl.edu>
+    * DESCRIPTION (Version, Date): 0.01-10.
+    * R/jags: 
+        1. change pos=parent.frame(1)
+        2. add envir=parent.frame(1) in data dumping
+
+
+2008-5-7  Yu-Sung Su     <ys463@columbia.edu>  
+          Masanao Yajima <yajima@stat.columbia.edu>  
+    * DESCRIPTION (Version, Date): 0.01-1.

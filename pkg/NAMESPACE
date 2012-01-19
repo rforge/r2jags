@@ -1,0 +1,30 @@
+#import("R2WinBUGS", "rjags")
+
+#importFrom(rjags,jags.model)
+#importFrom(rjags,coda.samples)
+
+importFrom(coda, "as.mcmc")
+
+exportClasses(
+              "rjags"              
+              )
+
+exportMethods(
+      "traceplot"
+)
+
+export(
+       "attach.jags",
+       "autojags",
+       "detach.jags",
+       "jags",
+       "jags2",
+       "jags2bugs",
+       "recompile"
+)
+
+S3method("recompile", "rjags")
+S3method("plot", "rjags")
+S3method("print", "rjags")
+S3method("update", "rjags")
+S3method("as.mcmc", "rjags")
