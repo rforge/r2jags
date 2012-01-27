@@ -26,10 +26,16 @@ jags <- function( data, inits,
                            && regexpr( "\\.txt$", data ) > 0 ) {
     ## 1. 'data' looks like a file name [UNDOCUMENTED!]
     if ( all( basename( data ) == data )) {
-      try( file.copy( file.path( working.directory, data ), data, overwrite = TRUE ) )
+      fn2 <- file.path( working.directory, data )
+      if (normalizePath(fn2)!=normalizePath(data)) {  ## file.copy() to same place trashes the file
+        try( file.copy(fn2 , data, overwrite = TRUE ) )
+      }
     }
     if ( !file.exists( data ) ) {
       stop("File",data,"does not exist")
+    }
+    if (file.info(data)["size"]==0) {
+      stop("Empty data file ",data)
     }
     e    <- new.env()
     eval( parse( data ), e )
