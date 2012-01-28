@@ -9,7 +9,8 @@ jags <- function( data, inits,
                   working.directory = NULL, 
                   jags.seed    = 123,
                   refresh      = n.iter/50, 
-                  progress.bar = "text" ) 
+                  progress.bar = "text",
+                  digits = 5) 
 {  
   require( rjags )
   if( !is.null( working.directory ) ){
@@ -48,6 +49,21 @@ jags <- function( data, inits,
     data           <- dlist
   } else if( !is.list( data ) ){
     stop( "data must be a character vector of object names, a list of object names, or a list of objects" )
+  }
+  
+  ## copied from R2WinBUGS: 
+  if (is.function(model.file)) {
+    temp <- tempfile("model")
+    temp <- if (is.R() || .Platform$OS.type != "windows") {
+      paste(temp, "txt", sep = ".")
+    }
+    else {
+      gsub("\\.tmp$", ".txt", temp)
+    }
+    write.model(model.file, con = temp, digits = digits) ## from R2WinBUGS
+    model.file <- gsub("\\\\", "/", temp)
+    if (!is.R()) 
+      on.exit(file.remove(model.file), add = TRUE)
   }
   if( DIC ){
     parameters.to.save <- c( parameters.to.save, "deviance" )
