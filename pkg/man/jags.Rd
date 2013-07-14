@@ -21,13 +21,19 @@ jags(data, inits, parameters.to.save, model.file="model.bug",
   n.chains=3, n.iter=2000, n.burnin=floor(n.iter/2),
   n.thin=max(1, floor((n.iter - n.burnin) / 1000)),
   DIC=TRUE, working.directory=NULL, jags.seed = 123,
-  refresh = n.iter/50, progress.bar = "text", digits=5)
+  refresh = n.iter/50, progress.bar = "text", digits=5,
+  RNGname = c("Wichmann-Hill", "Marsaglia-Multicarry", 
+              "Super-Duper", "Mersenne-Twister")
+  )
 
 jags.parallel(data, inits, parameters.to.save, model.file = "model.bug",
              n.chains = 3, n.iter = 2000, n.burnin = floor(n.iter/2),
              n.thin = max(1, floor((n.iter - n.burnin)/1000)),
              n.cluster= n.chains, DIC = TRUE,
-             working.directory = NULL, jags.seed = 123, digits=5)
+             working.directory = NULL, jags.seed = 123, digits=5,
+             RNGname = c("Wichmann-Hill", "Marsaglia-Multicarry", 
+              "Super-Duper", "Mersenne-Twister") 
+             )
 
 jags2(data, inits, parameters.to.save, model.file="model.bug",
   n.chains=3, n.iter=2000, n.burnin=floor(n.iter/2),
@@ -91,6 +97,9 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
       \dQuote{none}}
     \item{digits}{as in \code{\link{write.model}} in the \pkg{R2WinBUGS} package:  number of significant digits used for
   \code{BUGS} input, see \code{\link{formatC}}.  Only used if specifying  a \code{BUGS} model as an R function.}
+  \item{RNGname}{the name for random number generator used in JAGS. There are four RNGS 
+  supplied by the base moduale in JAGS: \code{Wichmann-Hill}, \code{Marsaglia-Multicarry}, 
+  \code{Super-Duper}, \code{Mersenne-Twister}}
 }
 
 
