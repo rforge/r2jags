@@ -82,7 +82,9 @@ jags2(data, inits, parameters.to.save, model.file="model.bug",
     and DIC. The rule \code{pD=var(deviance) / 2} is used.}
   \item{working.directory}{sets working directory during execution of
     this function; This should be the directory where model file is.}
-  \item{jags.seed}{random seed for \code{JAGS}, default is 123}.
+  \item{jags.seed}{random seed for \code{JAGS}, default is 123.  This function is used for 
+    jags.parallell() and does not work for jags().  Use set.seed() instead if you want to produce  
+    identical result with jags() }.
   \item{jags.path}{directory that contains the \code{JAGS} executable.
     The default is \dQuote{}.  }
   \item{clearWD}{indicating whether the files \file{data.txt},
