@@ -1,3 +1,7 @@
+2013-8-16 Yu-Sung Su <suyusung@tsinghua.edu.cn>  
+    * DESCRIPTION (Version, Date): 0.03-10
+    * R/jags: fix a minor gug in RNGname.
+
 2013-7-14 Yu-Sung Su <suyusung@tsinghua.edu.cn>  
     * DESCRIPTION (Version, Date): 0.03-09
     * R/jags: users can set RNGname in jags() now.

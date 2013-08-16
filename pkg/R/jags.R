@@ -83,7 +83,7 @@ jags <- function( data, inits,
   }
 
   RNGname <- match.arg(RNGname)
-  if(RNGname %in% c("Wichmann-Hill", "Marsaglia-Multicarry", "Super-Duper", "baseMersenne-Twister")){
+  if(RNGname %in% c("Wichmann-Hill", "Marsaglia-Multicarry", "Super-Duper", "Mersenne-Twister")){
     RNGname <- paste("base::",RNGname,sep="")
   }else{
     stop("The name of the RNG is not correctly provided!")
