@@ -20,7 +20,7 @@ jags.sims <- function (parameters.to.save, n.chains, n.iter, n.burnin, n.thin,
   root.long <- character(n.parameters)
   indexes.long <- vector(n.parameters, mode = "list")
   for (i in 1:n.parameters) {
-      temp <- R2WinBUGS:::decode.parameter.name(parameter.names[i])
+      temp <- R2WinBUGS::decode.parameter.name(parameter.names[i])
       root.long[i] <- temp$root
       indexes.long[[i]] <- temp$indexes
   }
