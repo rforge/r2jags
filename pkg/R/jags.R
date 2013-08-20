@@ -14,7 +14,7 @@ jags <- function( data, inits,
                   RNGname = c("Wichmann-Hill", "Marsaglia-Multicarry", "Super-Duper", "Mersenne-Twister")
                   ) 
 {  
-  require( rjags )
+  #require( rjags )
   if( !is.null( working.directory ) ){
     working.directory <- path.expand( working.directory )
     savedWD <- getwd()
