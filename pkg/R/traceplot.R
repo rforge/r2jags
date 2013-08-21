@@ -9,7 +9,7 @@ if (!isGeneric("tracplot")) {
 }
 
 
-traceplot.default <- coda::traceplot
+ttraceplot.default <- function(x, ...) coda::traceplot
 
 
 # ========================================================================
