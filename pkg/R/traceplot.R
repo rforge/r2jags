@@ -2,14 +2,15 @@
 
 
 
-if (!isGeneric("tracplot")) {
+if (!isGeneric("traceplot")) {
     setGeneric("traceplot",
                function(x, ...)
-               standardGeneric("traceplot"))
-}
+               standardGeneric("traceplot"),
+                useAsDefault = function(x, ...) coda::traceplot(x, ...))
+} 
 
 
-ttraceplot.default <- function(x, ...) coda::traceplot
+#ttraceplot.default <- function(x, ...) coda::traceplot
 
 
 # ========================================================================
