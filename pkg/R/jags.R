@@ -128,7 +128,7 @@ jags <- function( data, inits,
     for (i in 1:n.chains){
       init.values[[i]] <- inits[[i]]
       init.values[[i]]$.RNG.name <- RNGname
-      init.values[[i]]$.RNG.seed <- abs(.Random.seed[i+1])
+      init.values[[i]]$.RNG.seed <- runif(1, 0, 2^31)#abs(.Random.seed[i+1])
     }
    }
 
