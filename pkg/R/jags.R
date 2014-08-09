@@ -152,8 +152,7 @@ jags <- function( data, inits,
                   data     = data,
                   inits    = init.values,
                   n.chains = n.chains,
-                  n.adapt  = 0,
-                  quiet = progress.bar == "none")
+                  n.adapt  = 0 )
   #}
   adapt( m,
          n.iter         = n.adapt,

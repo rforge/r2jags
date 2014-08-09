@@ -10,3 +10,7 @@ Imports: abind, coda (>= 0.13), methods, R2WinBUGS, parallel
 SystemRequirements: jags (>= 3.3.0)
 Description: Using this package to call jags from R.
 License: GPL (>= 2)
+Packaged: 2014-06-19 04:24:37 UTC; suyusung
+NeedsCompilation: no
+Repository: CRAN
+Date/Publication: 2014-06-19 08:29:23
