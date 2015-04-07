@@ -1,3 +1,6 @@
+2015-4-7 Yu-Sung Su <suyusung@tsinghua.edu.cn>
+    * DESCRIPTION (Version, Date): 0.5-3
+ 
 2015-3-5 Yu-Sung Su <suyusung@tsinghua.edu.cn>
     * man/jags: comment out xyplot and densityplot from example code to avoid from importing lattice library.
 
