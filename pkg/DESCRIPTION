@@ -1,12 +1,12 @@
 Package: R2jags
 Version: 0.5-4
-Date: 2015-4-7
+Date: 2015-4-19
 Title: A Package for Running 'JAGS' from R
 Author: Yu-Sung Su <suyusung@tsinghua.edu.cn>,
         Masanao Yajima <yajima@stat.ucla.edu>,
 Maintainer: Yu-Sung Su <suyusung@tsinghua.edu.cn>
 Depends: R (>= 2.14.0), rjags (>= 3-3)
 Imports: abind, coda (>= 0.13), methods, R2WinBUGS, parallel
-SystemRequirements: jags (>= 3.3.0)
+SystemRequirements: JAGS (http://mcmc-jags.sourceforge.net)
 Description: Using this package to call 'JAGS' from R.
 License: GPL (>= 2)
