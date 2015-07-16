@@ -1,5 +1,13 @@
 importFrom(methods, "setOldClass")
 
+
+importFrom(graphics, "axis", "lines", "matplot", "par", "plot", "title")
+importFrom(grDevices, rainbow)
+importFrom(stats, "lowess", "quantile", "runif", "sd", "time", "update", "var")
+importFrom(utils, "read.table")
+
+
+
 importFrom(rjags, "jags.model",
                   "coda.samples",
                   "load.module",
