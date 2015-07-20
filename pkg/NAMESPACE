@@ -15,7 +15,13 @@ importFrom(rjags, "jags.model",
 
 importFrom(abind, "abind")
 
-importFrom(coda, "as.mcmc", "mcmc", "as.mcmc.list", "traceplot")
+importFrom(coda, "as.mcmc", 
+    "mcmc", 
+    "as.mcmc.list", 
+    "traceplot", 
+    "nvar", 
+    "nchain",
+    "varnames")
 
 import(parallel)
 
